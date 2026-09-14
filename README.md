@@ -18,7 +18,7 @@ https://mxmsmnv.github.io/lumen-enterprise-design-system/
 - Blocks: hero, task wall, card collection, promotion, information CTA, quick links, article, related content and share group
 - Complete pages: retreat home, room collection and program detail
 
-Every catalog entry has its own hash route, four useful examples or states, responsive preview controls, local light/dark preview, usage guidance, accessible markup, classes and token references.
+The documentation follows a two-level discovery model: full-width overview pages for Foundation, Components, Patterns, Examples and About, plus a searchable local sidebar on detail pages. Every catalog entry has its own hash route and four isolated examples or states. Each example has independent responsive controls, a local light/dark preview, revealable copyable HTML, usage guidance, public classes, token references and accessibility requirements.
 
 ## Files
 
@@ -27,9 +27,12 @@ Every catalog entry has its own hash route, four useful examples or states, resp
 ├── index.html              # Catalog shell and metadata
 ├── 404.html                # GitHub Pages hash-route fallback
 ├── favicon.svg             # Project-specific icon
-├── styles.css              # Reusable design-system CSS
-├── app.js                  # Hash router, catalog content and interactions
+├── styles.css              # Reusable component and token CSS
+├── docs.css                # Documentation shell and preview harness
+├── app.js                  # Registry, hash router and interactions
 ├── tokens.json             # Portable design tokens
+├── package.json            # Optional local QA commands
+├── scripts/check.mjs       # Catalog contract validation
 └── assets/
     └── wellness-hero.png   # Original generated imagery; no source-brand assets
 ```
@@ -42,7 +45,15 @@ No installation or build is needed. Serve the directory with any static server:
 python3 -m http.server 4173
 ```
 
-Then open `http://localhost:4173/#/overview`.
+Then open `http://localhost:4173/#/home`.
+
+Run the catalog contract check after changes:
+
+```bash
+npm run check
+```
+
+The check validates required files, route coverage, theme and responsive contracts, independent preview controls, source-brand removal and JavaScript/token syntax.
 
 ## Use the CSS and tokens
 
