@@ -26,6 +26,7 @@ Every catalog entry has its own hash route, four useful examples or states, resp
 .
 ├── index.html              # Catalog shell and metadata
 ├── 404.html                # GitHub Pages hash-route fallback
+├── favicon.svg             # Project-specific icon
 ├── styles.css              # Reusable design-system CSS
 ├── app.js                  # Hash router, catalog content and interactions
 ├── tokens.json             # Portable design tokens
